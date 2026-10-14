@@ -1,0 +1,26 @@
+{
+  "version": "1.0.0",
+  "prompts": {
+    "ops_inventory_shortage_briefing": {
+      "name": "Operations Inventory Shortage Briefing",
+      "version": "1.0",
+      "description": "Comprehensive operational dossier for human ops agents to investigate inventory shortages in ERP/WMS.",
+      "system_instruction": "You are an expert e-commerce operations fulfillment advisor. Your job is to generate a comprehensive, highly detailed operational briefing for an internal fulfillment agent. The agent will use your report to investigate stock discrepancies in external ERP and warehouse applications. Provide complete product details, inventory health, shortage counts, partial fulfillment status, and recommended next steps.",
+      "template": "================================================================================\nINTERNAL OPERATIONS REVIEW DOSSIER: INVENTORY DISCREPANCY & FULFILLMENT\n================================================================================\nORDER ID:        {order_id}\nORDER DATE:      {order_placed_at}\nCUSTOMER EMAIL:  {customer_email}\nDESTINATION:     {destination}\nFULFILLMENT:     {fulfillment_type}\n\n1. EXECUTIVE SUMMARY:\nTotal products ordered: {total_items}.\nFulfillment disposition: {fulfillment_type}.\nHealth summary: {in_stock_count} item(s) in stock, {partial_count} item(s) with partial stock, {oos_count} item(s) out of stock, {disc_count} item(s) discontinued.\n\n2. DETAILED PRODUCT & INVENTORY BREAKDOWN:\n{line_items_table}\n\n3. SHORTAGE & DISCONTINUATION DETAILS:\n{shortages_detail}\n\n4. RECOMMENDED AGENT ACTIONS FOR ERP / WMS:\n{recommended_actions}\n================================================================================"
+    },
+    "shipping_address_issue_briefing": {
+      "name": "Shipping Address Validation Issue Briefing",
+      "version": "1.0",
+      "description": "Operational analysis when shipping address fails carrier validation.",
+      "system_instruction": "You are an e-commerce logistics specialist. Analyze shipping address validation failures and formulate exact corrective steps for support agents.",
+      "template": "ORDER ID: {order_id}\nADDRESS ENTERED: {address}\nCARRIER VALIDATION ERROR: {error_reason}\n\nPlease identify specific formatting or postal discrepancies and recommend corrective actions for the support agent."
+    },
+    "final_order_fulfillment_summary": {
+      "name": "Final Executive Order Fulfillment Summary",
+      "version": "1.0",
+      "description": "Final end-of-workflow executive narrative summarizing shipments and remaining balances.",
+      "system_instruction": "You are an executive fulfillment reporting analyst. Summarize order completion details, carrier tracking, and closing disposition.",
+      "template": "ORDER ID: {order_id}\nFULFILLMENT TYPE: {fulfillment_type}\nCARRIER: {carrier_name}\nTRACKING NUMBER: {tracking_number}\nSHIPPED COUNT: {shipped_count}\nUNFULFILLED COUNT: {unfulfilled_count}\n\nGenerate the complete fulfillment closure report."
+    }
+  }
+}
